@@ -1,0 +1,42 @@
+{
+    "hiphop": {
+        "title": "Without Me - Eminem",
+        "image": "images/hip.jpeg",
+        "file": "songs/hip.mp3"
+    },
+    "pop": {
+        "title": "Magnetic - Illit",
+        "image": "images/pop.jpeg",
+        "file": "songs/pop.mp3"
+    },
+    "indie": {
+        "title": "Revolusi - Bunkface",
+        "image": "images/indie.jpeg",
+        "file": "songs/indie.mp3"
+    },
+    "jazz": {
+        "title": "From the Start - Laufey",
+        "image": "images/jazz.jpeg",
+        "file": "songs/jazz.mp3"
+    },
+    "rock": {
+        "title": "Mad World - One Ok Rock",
+        "image": "images/rock.jpeg",
+        "file": "songs/rock.mp3"
+    },
+    "country": {
+        "title": "Hey, Soul Sister - Train",
+        "image": "images/country.jpeg",
+        "file": "songs/country.mp3"
+    },
+    "electronic": {
+        "title": "Ternyata Abu-Abu - DJ Desa",
+        "image": "images/electronic.png",
+        "file": "songs/electronic.mp3"
+    },
+    "classic": {
+        "title": "Serenade No. 13 for strings in G major - Mozart",
+        "image": "images/classic.jpg",
+        "file": "songs/classic.mp3"
+    }
+}

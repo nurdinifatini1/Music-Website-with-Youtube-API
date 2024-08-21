@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-soft-pink">
+        <div class="container">
+            <img src="images/logo.png" alt="Image" class="img-fluid logo-animation" style="max-width: 250px;">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="index.html">Home</a>
+                <a class="nav-item nav-link" href="search.html">Search</a>
+                <a class="nav-item nav-link" href="genres.html">Genres</a>
+                <a class="nav-item nav-link" href="about.html">About</a>
+                <a class="nav-item nav-link" href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="search-container">
+        <div class="search-input-wrapper">
+            <input type="text" id="search-input" placeholder="Search for videos...">
+            <button id="search-button">
+                <i class="fas fa-search"></i> Search
+            </button>
+        </div>
+        <div id="suggestions"></div>
+    </div>
+    <div id="results"></div>
+
+    <script src="youtube.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById('search-input');
+            const suggestions = document.getElementById('suggestions');
+    
+            searchInput.addEventListener('input', function () {
+                if (searchInput.value.trim() === '') {
+                    suggestions.style.display = 'none';
+                } else {
+                    suggestions.style.display = 'block';
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById('search-input');
+            const suggestions = document.getElementById('suggestions');
+    
+            searchInput.addEventListener('input', function () {
+                if (searchInput.value.trim() === '') {
+                    suggestions.style.display = 'none';
+                } else {
+                    suggestions.style.display = 'block';
+                }
+            });
+    
+            document.addEventListener('click', function (event) {
+                if (!searchInput.contains(event.target) && !suggestions.contains(event.target)) {
+                    suggestions.style.display = 'none';
+                }
+            });
+    
+            searchInput.addEventListener('focus', function () {
+                if (searchInput.value.trim() !== '') {
+                    suggestions.style.display = 'block';
+                }
+            });
+    
+            searchInput.addEventListener('blur', function () {
+                setTimeout(function() { 
+                    suggestions.style.display = 'none';
+                }, 100);
+            });
+        });
+    </script>    
+</body>
+</html>
